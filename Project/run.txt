@@ -1,0 +1,4 @@
+flume:
+flume-ng agent -n agent1 -c /home/cloudera/Desktop/Project/ /home/cloudera/Desktop/Project/flume.conf
+Spark:
+spark-submit --class "cs523.Project.SparkStreaming.SparkStream" --master yarn  /home/cloudera/Desktop/Project/SparkStreaming-0.0.1-SNAPSHOT quickstart.cloudera  9999

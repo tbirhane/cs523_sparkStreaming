@@ -1,0 +1,10 @@
+# Start the ZooKeeper service
+# Note: Soon, ZooKeeper will no longer be required by Apache Kafka.
+$ bin/zookeeper-server-start.sh config/zookeeper.properties
+# Start the Kafka broker service
+$ bin/kafka-server-start.sh config/server.properties
+#create topic
+$ bin/kafka-topics.sh --create --zookeeper localhost:2181 --topic CS523_TOPIC --replication-factor 1 -- partition 1
+
+#create consumer
+bin/kafka-console-consumer.sh --topic CS523_TOPIC --from-beginning --bootstrap-server localhost:9092
